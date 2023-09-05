@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const equivalentDonation = yourNetWorthValue / 21400;
         donationAmount.innerHTML = `${parseFloat(
             equivalentDonation.toFixed(2)
-        ).toLocaleString()}€`;
+        ).toLocaleString()}&nbsp;€`;
 
         // Update the "equivalent" span based on the closest value
         let closestValue = Object.keys(valueToItemMapping)[0];
