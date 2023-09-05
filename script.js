@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const yourNetWorth = document.getElementById('yourNetWorth');
-    const donationAmount = document.getElementById('donationAmount');
+document.addEventListener("DOMContentLoaded", () => {
+    const yourNetWorth = document.getElementById("yourNetWorth");
+    const donationAmount = document.getElementById("donationAmount");
 
     const valueToItemMapping = {
         0: "aux impôts payés par Starbucks en France",
@@ -31,19 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
         29.95: "au prix d'un titre de noblesse de Sealand",
         36: "à une dédicace vidéo de 15 secondes par Tibo Inshape",
         69.9: "à trois boules de pétanque sur la boutique de l'Elysée",
-        80: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi"
+        80: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi",
     };
 
-    yourNetWorth.addEventListener('input', (e) => {
+    yourNetWorth.addEventListener("input", (e) => {
         const yourNetWorthValue = +e.target.value;
 
         const equivalentDonation = yourNetWorthValue / 21400;
-        donationAmount.innerHTML = equivalentDonation.toFixed(2)
-            // Use comma as decimal separator
-            .replace('.', ',')
-            // Add thousands separators
-            .replace(/\B(?=(\d{3})+(?!\d))/g, '&nbsp;')
-            + '&nbsp;€';
+        donationAmount.innerHTML =
+            equivalentDonation
+                .toFixed(2)
+                // Use comma as decimal separator
+                .replace(".", ",")
+                // Add thousands separators
+                .replace(/\B(?=(\d{3})+(?!\d))/g, "&nbsp;") + "&nbsp;€";
 
         // Update the "equivalent" span based on the closest value
         let closestValue = Object.keys(valueToItemMapping)[0];
@@ -59,10 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         equivalent.textContent = valueToItemMapping[closestValue];
 
-        yourNetWorth.style.width = e.target.value.length + 'ch';
+        yourNetWorth.style.width = e.target.value.length + "ch";
     });
 
-    yourNetWorth.addEventListener('change', (e) => {
+    yourNetWorth.addEventListener("change", (e) => {
         // If the value is invalid (empty string or NaN), replace with 0 when clicking outside of the input
         if (!e.target.value) {
             yourNetWorth.value = 0;
