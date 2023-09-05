@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Donation Calculator</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel='stylesheet' href='styles.css'>
 </head>
 <body>
-    <p class="text">Avec une fortune de <span id="netWorth">214&nbsp;000&nbsp;000&nbsp;000&nbsp;€</span>, <br /> Bernard Arnault donne <span id="donation">10&nbsp;millions</span> aux Restos du Cœur.</p>
+    <p>
+        Avec une fortune de
+        <span id='netWorth'>214&nbsp;000&nbsp;000&nbsp;000&nbsp;€</span>,
+        <br />
+        Bernard Arnault donne
+        <span id='donation'>10&nbsp;millions</span>
+        aux Restos du Cœur.
+    </p>
     <br /><br />
-    <p class="text" id="part2">Avec votre patrimoine de <span id="yourNetWorthContainer" contenteditable><span id="yourNetWorth">117 000</span></span><span class="cursor">|</span> €, <br /> c'est comme si vous donniez <br /><br /><span id="donationAmount">5.57 €</span></p>
-    <p class="text" id="eqLine">Ce qui équivaut <span id="equivalent">à un kebab</span>.</p>
-    <footer class="footer">Créé par <a href="https://twitter.com/MathisHammel" target="_blank">@MathisHammel</a>.</footer>
-    <script src="script.js"></script>
+    <p id='part2'>
+        Avec votre patrimoine de
+        <input id='yourNetWorth' type='number' value='117000' autocomplete='off'>&nbsp;€,
+        <br />
+        c'est comme si vous donniez
+        <br /><br />
+        <span id='donationAmount'>5,57&nbsp;€</span>
+    </p>
+    <p id='eqLine'>
+        Ce qui équivaut <span id='equivalent'>à un kebab</span>.
+    </p>
+    <footer class='footer'>
+        Créé par <a href='https://twitter.com/MathisHammel' target='_blank'>@MathisHammel</a>.
+    </footer>
+    <script src='script.js'></script>
 </body>
 </html>
