@@ -17,8 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         2: "à 10km parcourus en TGV",
         2.1: "à un ticket de métro parisien",
         2.48: "à un café en terrasse à Paris",
+        3.69: "à un paquet de pâtes fraîches gnocchi à poêler Lustucru chez carrefour",
         4: "à un paquet de 10 cartes Pokémon",
-        5.5: "à un kebab",
+        5.5: "à un kebab sans boisson",
         5.99: "à un mois d'abonnement (avec des pubs 😤) à Netflix",
         6.2: "au prix de construction d'1 cm d'autoroute",
         6.9: "à 1 minute d'un consultant McKinsey",
@@ -30,8 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         23: "à un exemplaire papier du Temps des Tempêtes",
         29.95: "au prix d'un titre de noblesse de Sealand",
         36: "à une dédicace vidéo de 15 secondes par Tibo Inshape",
+        44.90: "à un diable de manutention rigide, charge garantie 150 kg",
         69.9: "à trois boules de pétanque sur la boutique de l'Elysée",
         80: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi"
+        275.3: "à une journée d'école à l'ESCP buisness school de Paris... Merci papa maman.",
+        
     };
 
     yourNetWorth.addEventListener('input', (e) => {
