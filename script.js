@@ -43,15 +43,14 @@ document.addEventListener("DOMContentLoaded", function () {
             yourNetWorth.textContent = yourNetWorth.textContent.replace(/ /g, '');
             cursor.style.display = "none";
             firstEdit = false;
+            // Create a range to place the cursor at the end
+            const range = document.createRange();
+            range.selectNodeContents(yourNetWorth);
+            // range.collapse(false);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
         }
-
-        // Create a range to place the cursor at the end
-        const range = document.createRange();
-        range.selectNodeContents(yourNetWorth);
-        // range.collapse(false);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
     });
 
     yourNetWorthContainer.addEventListener("input", function () {
@@ -66,7 +65,15 @@ document.addEventListener("DOMContentLoaded", function () {
             yourNetWorth.textContent = inputText;
             const range = document.createRange();
             range.selectNodeContents(yourNetWorth);
-            // range.collapse(false);
+            range.collapse(false);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+        } else if (inputText.length === 1) {
+            yourNetWorth.textContent = inputText;
+            const range = document.createRange();
+            range.selectNodeContents(yourNetWorth);
+            range.collapse(false);
             const selection = window.getSelection();
             selection.removeAllRanges();
             selection.addRange(range);
