@@ -66,4 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
             yourNetWorth.value = 0;
         }
     });
+
+    yourNetWorth.value = 117000;
+    yourNetWorth.dispatchEvent(new Event("input"));
 });
