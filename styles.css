@@ -67,6 +67,22 @@ input[type=number] {
     color: #F34213; /* text color for #donation */
 }
 
+#donateRestos {
+    font-size: 18px;
+}
+
+/* unvisited link */
+#donateRestos > a:link {
+    color: rgb(37, 124, 255);
+    text-decoration: none;
+}
+  
+/* visited link */
+#donateRestos > a:visited {
+    color: rgb(235, 103, 255);
+    text-decoration: none;
+}
+
 .footer {
     position: fixed;
     bottom: 0px; /* Minimum spacing from the element above */
