@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #040920;
+    margin: 0;
+    padding: 10%;
+}
+
+.text {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    color: white; /* Default text color for .text elements */
+}
+
+.transparent {
+    color: rgba(0, 123, 255, 0.5); /* Slightly transparent text color for unmodified input */
+}
+
+#yourNetWorthContainer {
+    display: inline-block;
+    position: relative;
+}
+
+#part2 {
+    font-size: 48px;
+}
+
+#eqLine {
+    font-size: 22px;
+}
+
+#equivalent {
+    border-bottom: 1px solid #b0b0b0;
+}
+
+#yourNetWorth {
+    font-weight: bold;
+    border-bottom: 1px solid #b0b0b0;
+    color: #F2BB05; /* text color for #yourNetWorth */
+    display:block;
+}
+
+#donationAmount {
+    color: #F2BB05; /* text color for #donationAmount */
+    font-size: 110px;
+}
+
+#netWorth {
+    color: #F34213; /* text color for #netWorth */
+}
+
+#donation {
+    color: #F34213; /* text color for #donation */
+}
+
+.cursor {
+    display: inline-block;
+    width: 10px;
+    height: 36px;
+    animation: blinkCursor 1s infinite;
+    font-weight: lighter;
+}
+
+.editable {
+    cursor: text;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px; /* Minimum spacing from the element above */
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #000000;
+    padding: 10px;
+    color: white;
+}
+
+.footer a {
+    color: rgb(103, 174, 255);
+    text-decoration: none;
+}
+
+@keyframes blinkCursor {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
