@@ -33,8 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         36: "à une dédicace vidéo de 15 secondes par Tibo Inshape",
         44.90: "à un diable de manutention rigide, charge garantie 150 kg",
         69.9: "à trois boules de pétanque sur la boutique de l'Elysée",
-        80: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi"
-        275.3: "à une journée d'école à l'ESCP buisness school de Paris... Merci papa maman.",
+        75: "à une minute de pub sur le plus grand écran de time square",
+        80: "à 174 capsules nespresso d'expresso déca",
+        100: "à 25 sachet de corde de air guitare du groupe Kiss",
+        130: "à 2 grammes de farine à se mettre dans les nasaux",
+        137.6: "à une demi-journée d'école à l'ESCP Paris... Merci papa maman.",
+        150: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi"
         
     };
 
