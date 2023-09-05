@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const yourNetWorth = document.getElementById("yourNetWorth");
     const donationAmount = document.getElementById("donationAmount");
+    const equivalent = document.getElementById("equivalent");
 
     const valueToItemMapping = {
         0: "aux impôts payés par Starbucks en France",
