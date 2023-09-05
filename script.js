@@ -1,10 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const yourNetWorthContainer = document.getElementById("yourNetWorthContainer");
-    const yourNetWorth = document.getElementById("yourNetWorth");
-    const donationAmount = document.getElementById("donationAmount");
-    const cursor = document.querySelector(".cursor");
-
-    let firstEdit = true; // Flag to track the first edit
+document.addEventListener('DOMContentLoaded', () => {
+    const yourNetWorth = document.getElementById('yourNetWorth');
+    const donationAmount = document.getElementById('donationAmount');
 
     const valueToItemMapping = {
         0: "aux impôts payés par Starbucks en France",
@@ -38,72 +34,38 @@ document.addEventListener("DOMContentLoaded", function () {
         80: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi"
     };
 
-    yourNetWorthContainer.addEventListener("click", function () {
-        if (firstEdit) {
-            yourNetWorth.textContent = yourNetWorth.textContent.replace(/ /g, '');
-            cursor.style.display = "none";
-            firstEdit = false;
-            // Create a range to place the cursor at the end
-            const range = document.createRange();
-            range.selectNodeContents(yourNetWorth);
-            // range.collapse(false);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
+    yourNetWorth.addEventListener('input', (e) => {
+        const yourNetWorthValue = +e.target.value;
+
+        const equivalentDonation = yourNetWorthValue / 21400;
+        donationAmount.innerHTML = equivalentDonation.toFixed(2)
+            // Use comma as decimal separator
+            .replace('.', ',')
+            // Add thousands separators
+            .replace(/\B(?=(\d{3})+(?!\d))/g, '&nbsp;')
+            + '&nbsp;€';
+
+        // Update the "equivalent" span based on the closest value
+        let closestValue = Object.keys(valueToItemMapping)[0];
+        let minDifference = Math.abs(equivalentDonation - closestValue);
+
+        for (const value in valueToItemMapping) {
+            const difference = Math.abs(equivalentDonation - value);
+            if (difference < minDifference) {
+                minDifference = difference;
+                closestValue = value;
+            }
         }
+
+        equivalent.textContent = valueToItemMapping[closestValue];
+
+        yourNetWorth.style.width = e.target.value.length + 'ch';
     });
 
-    yourNetWorthContainer.addEventListener("input", function () {
-        let inputText = yourNetWorth.textContent;
-
-        // Remove any non-numeric characters and leading zeros
-        inputText = inputText.replace(/[^0-9]/g, '');
-        inputText = inputText.replace(/^0+/, '');
-        
-        if (inputText === '') {
-            inputText = '0'; // Ensure there's always a number, even if it's zero
-            yourNetWorth.textContent = inputText;
-            const range = document.createRange();
-            range.selectNodeContents(yourNetWorth);
-            range.collapse(false);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-        } else if (inputText.length === 1) {
-            yourNetWorth.textContent = inputText;
-            const range = document.createRange();
-            range.selectNodeContents(yourNetWorth);
-            range.collapse(false);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-        } else {
-            yourNetWorth.textContent = inputText;
-        }        
-
-        const yourNetWorthValue = parseFloat(inputText);
-
-        if (!isNaN(yourNetWorthValue)) {
-            const equivalentDonation = (yourNetWorthValue / 21400).toFixed(2);
-            donationAmount.textContent = equivalentDonation + "€";
-
-            // Update the "equivalent" span based on the closest value
-            let closestValue = Object.keys(valueToItemMapping)[0];
-            let minDifference = Math.abs(equivalentDonation - closestValue);
-
-            for (const value in valueToItemMapping) {
-                const difference = Math.abs(equivalentDonation - value);
-                if (difference < minDifference) {
-                    minDifference = difference;
-                    closestValue = value;
-                }
-            }
-
-            equivalent.textContent = valueToItemMapping[closestValue];
-        } else {
-            donationAmount.textContent = "Invalid input";
+    yourNetWorth.addEventListener('change', (e) => {
+        // If the value is invalid (empty string or NaN), replace with 0 when clicking outside of the input
+        if (!e.target.value) {
+            yourNetWorth.value = 0;
         }
-
-        
     });
 });

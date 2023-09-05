@@ -5,7 +5,7 @@ body {
     padding: 10%;
 }
 
-.text {
+p {
     font-size: 36px;
     font-weight: bold;
     text-align: center;
@@ -13,13 +13,20 @@ body {
     color: white; /* Default text color for .text elements */
 }
 
-.transparent {
-    color: rgba(0, 123, 255, 0.5); /* Slightly transparent text color for unmodified input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
-#yourNetWorthContainer {
-    display: inline-block;
-    position: relative;
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.transparent {
+    color: rgba(0, 123, 255, 0.5); /* Slightly transparent text color for unmodified input */
 }
 
 #part2 {
@@ -35,10 +42,16 @@ body {
 }
 
 #yourNetWorth {
+    font-size: inherit;
     font-weight: bold;
+    border: none;
+    outline: none;
     border-bottom: 1px solid #b0b0b0;
+    background: transparent;
     color: #F2BB05; /* text color for #yourNetWorth */
-    display:block;
+    text-align: center;
+    width: 6ch;
+    min-width: 1ch;
 }
 
 #donationAmount {
@@ -52,18 +65,6 @@ body {
 
 #donation {
     color: #F34213; /* text color for #donation */
-}
-
-.cursor {
-    display: inline-block;
-    width: 10px;
-    height: 36px;
-    animation: blinkCursor 1s infinite;
-    font-weight: lighter;
-}
-
-.editable {
-    cursor: text;
 }
 
 .footer {
@@ -80,16 +81,4 @@ body {
 .footer a {
     color: rgb(103, 174, 255);
     text-decoration: none;
-}
-
-@keyframes blinkCursor {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
