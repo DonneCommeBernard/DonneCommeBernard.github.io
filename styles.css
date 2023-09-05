@@ -67,6 +67,14 @@ input[type=number] {
     color: #F34213; /* text color for #donation */
 }
 
+a:link {
+    color: #F34213;
+}
+
+a:visited {
+    color: #F2BB05;
+}
+
 .footer {
     position: fixed;
     bottom: 0px; /* Minimum spacing from the element above */
