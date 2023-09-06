@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
         69.9: "à trois boules de pétanque sur la boutique de l'Elysée",
         80: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi",
         100: "à un abonnement annuel à Spotify",
-        700: 'à la taxte foncière moyenne à Paris en 2022',
+        700: 'à la taxe foncière moyenne à Paris en 2022',
     };
 
     yourNetWorth.addEventListener("input", (e) => {
