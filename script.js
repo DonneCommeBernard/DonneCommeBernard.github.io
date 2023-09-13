@@ -33,10 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
         23: "à un exemplaire papier du Temps des Tempêtes",
         29.95: "au prix d'un titre de noblesse de Sealand",
         36: "à une dédicace vidéo de 15 secondes par Tibo Inshape",
-        49.3: "au chiffre préféré d'Élisabeth Borne",
         69.9: "à trois boules de pétanque sur la boutique de l'Elysée",
-        80: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi",
         120: "à 1 mois d'appel illimité de 6h à 17h chez Bouygues Télécom en 2001",
+        150: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi",
     };
 
     yourNetWorth.addEventListener("input", (e) => {
