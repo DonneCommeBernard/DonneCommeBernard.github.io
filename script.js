@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     yourNetWorth.addEventListener("input", (e) => {
         const yourNetWorthValue = +e.target.value;
 
-        const equivalentDonation = yourNetWorthValue / 21400;
+        const equivalentDonation = yourNetWorthValue / 290;
         donationAmount.innerHTML = `${parseFloat(
             equivalentDonation.toFixed(2)
         ).toLocaleString()}&nbsp;€`;
