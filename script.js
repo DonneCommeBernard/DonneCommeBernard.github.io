@@ -25,14 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
         6.9: "à 1 minute d'un consultant McKinsey",
         7.7: "à un ticket resto",
         9.12: "à une heure de SMIC net",
+        10: "à 10 balles et un mars",
         10.4: "à 1h de salaire net d'un enseignant débutant",
         12: "à une place de cinéma",
+        15: "au panier moyen de ton repas Mcdo",
         16.66: "à 3 secondes de déplacement de Macron en avion",
         23: "à un exemplaire papier du Temps des Tempêtes",
         29.95: "au prix d'un titre de noblesse de Sealand",
         36: "à une dédicace vidéo de 15 secondes par Tibo Inshape",
+        49.3: "A la reforme des retraires de Macron",
         69.9: "à trois boules de pétanque sur la boutique de l'Elysée",
         80: "à beaucoup de trucs. J'espère que tu paies bien tes impôts toi",
+        100: "à un abonnement annuel à Spotify",
+        700: 'à la taxe foncière moyenne à Paris en 2022',
     };
 
     yourNetWorth.addEventListener("input", (e) => {
