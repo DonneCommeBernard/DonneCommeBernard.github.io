@@ -36,6 +36,21 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     yourNetWorth.addEventListener("input", (e) => {
+        // if the value is superior to 999 999 999 999 999, replace with 999 999 999 999 999
+        if (e.target.value > 999999999999999) {
+            yourNetWorth.value = 999999999999999;
+        }
+
+        console.log(e.target.value.length);
+
+        // Adjust font size based on lenght of the input
+
+        if (e.target.value.length > 6) {
+            donationAmount.style.fontSize = "5rem";
+        } else {
+            donationAmount.style.fontSize = "8rem";
+        }
+
         const yourNetWorthValue = +e.target.value;
 
         const equivalentDonation = yourNetWorthValue / 21400;
@@ -64,6 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
         // If the value is invalid (empty string or NaN), replace with 0 when clicking outside of the input
         if (!e.target.value) {
             yourNetWorth.value = 0;
+        }
+
+        // If the value is negative, replace the net worth with 0, and donation with 0
+        if (e.target.value < 0) {
+            yourNetWorth.value = 0;
+
+            donationAmount.innerHTML = "0&nbsp;€";
+            equivalent.textContent = valueToItemMapping[closestValue];
         }
     });
 
