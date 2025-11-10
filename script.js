@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const valueToItemMapping = {
         0: "aux impôts payés par Starbucks en France",
         0.04: "à une impression A4 en couleur",
-        0.15: "à un pain au chocolat (selon Jean-François Copé)",
+        0.15: "d'une chocolatine (selon Jean-François Copé)",
         0.2: "à une bouteille d'eau minérale",
         0.49: "à 1cm² d'appartement à Lyon",
         0.6: "à un gros croc dans un Big Mac",
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         0.9: "à une cannette de Kronenbourg",
         1: "à 1 litre d'essence en 2002",
         1.2: "à 1km en taxi",
-        1.4: "à un pain au chocolat (pas selon Jean-François Copé)",
+        1.4: "d'une chocolatine (pas selon Jean-François Copé)",
         2: "à 10km parcourus en TGV",
         2.1: "à un ticket de métro parisien",
         2.48: "à un café en terrasse à Paris",
